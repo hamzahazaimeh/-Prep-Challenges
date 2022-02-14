@@ -61,12 +61,12 @@ const sumNums = (arr)=>{
 // Output: ['Python','Ruby','JS','C#']
 
 const reverseArray = (arr)=>{
-    for (var i = 0; i < arr.length; i++) {
-        console.log(arr[i])
-    }
+  
+    let reversed=[];
     for (var i = arr.length-1; i >=0 ; i--) {
-        console.log(arr[i])
+        reversed.push(arr[i]);
     }
+    return reversed;
 }
 // -------------------------------------------------------------------------------------------------------
 

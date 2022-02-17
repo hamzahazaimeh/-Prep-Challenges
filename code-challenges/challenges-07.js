@@ -19,14 +19,9 @@
 //  Note that:
 //  1- The text template is "my name is ** ** I am ** YO, and I love **."
 //  2- The first letters of the firstName and lastName should be capital letter
-let obj = {
-          firstName: 'Ellie',
-         lastName: 'jon',
-          age: 67,
-          hobby: 'Gaming and Sleeping'
-      }
+
 const objLat = (obj) => {
-console.log('my name is  ${obj['firstName']}');
+
 };
 // -------------------------------------------------------------------------------------------------------
 

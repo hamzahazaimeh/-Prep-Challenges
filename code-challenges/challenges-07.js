@@ -85,7 +85,7 @@ const objLat = (obj) => {
 //         fullName: "Shira",
 //         tech: ".Net"
 //     },
-//     {
+//     { 
 //         fullName: "Isabella",
 //         tech: "Java"
 //     }

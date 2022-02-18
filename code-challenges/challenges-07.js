@@ -22,7 +22,18 @@
 
 const objLat = (obj) => {
 
-};
+    if ((obj.firstName).charAt(0)==(obj.firstName).toUpperCase() && (obj.lastName).charAt(0)==(obj.lastName).toUpperCase()) {
+        return `my name is ${obj.firstName} ${obj.lastName} I am ${obj.age} YO, and I love ${obj.hobby}.`  ;
+   
+      }
+      else{
+          let firstCharInFirstName=((obj.firstName).charAt(0)).toUpperCase();
+          let firstCharInLastName=((obj.lastName).charAt(0)).toUpperCase();
+          obj.firstName=firstCharInFirstName+((obj.firstName).substring(1)).toLowerCase();
+          obj.lastName=firstCharInLastName+((obj.lastName).substring(1)).toLowerCase();
+          return `my name is ${obj.firstName} ${obj.lastName} I am ${obj.age} YO, and I love ${obj.hobby}.` ;
+       }
+}
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -85,7 +96,45 @@ const objLat = (obj) => {
 //  2- If one of the names is null dont add it to the full name
 
 const cvFormatter = (arr) => {
-    // write your code here
+     for (let i = 0; i < arr.length; i++) {
+        var nI;
+        if (arr[i].yearsOfExperience>1) {
+          if (arr[i].firstName !== null ) {
+              if (arr[i].lastName !== null) {
+                  let f_Name=arr[i].firstName +" "+arr[i].lastName;
+                  let techCopy=arr[i].tech;
+                  arr[i]={
+                      fullName:f_Name,
+                      tech:techCopy,
+                  };
+
+              }else{
+                let f_Name=arr[i].firstName;
+                let techCopy=arr[i].tech;
+                arr[i]={
+                    fullName:f_Name,
+                    tech:techCopy,
+                };
+              };
+
+          }else{
+           let f_Name =arr[i].lastName;
+             let techCopy=arr[i].tech;
+             arr[i]={
+                fullName:f_Name,
+                tech:techCopy,
+            };
+          };
+        }else{
+            nI=i;
+            arr[i]={};
+            }
+        };
+        const index = arr.indexOf(arr[nI]);
+            if (index > -1) {
+              arr.splice(index, 1); };
+        return arr;
+  
 };
 // -------------------------------------------------------------------------------------------------------
 
